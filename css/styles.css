@@ -10,11 +10,12 @@
 :root{
 
   --main-color:rgba(22, 24, 26, 1);
-  --secondary-color:rgba(22, 24, 26, 0.5);
+  --secondary-color:rgba(22, 24, 26, 1);
   --tertiary-color:#f5f6fa;
 
   --anotherColor:#c91e1e;
-  --anotherColor2:  #3498DB;
+  --anotherColor2:  #045b94;
+  --anotherColor3:  #1a7fc2;
 
   --logo-font: 30px;
   --font-styles:"Titillium Web", sans-serif;
@@ -300,7 +301,7 @@ position: relative;
 }
 
 .custom-shape-divider-bottom-1705554803 .shape-fill {
-  fill: #3498DB;
+  fill: #045b94;
 }
 
 
@@ -366,7 +367,7 @@ left: 19px;
 }
 .card-body h5{
 
-  color: var(--anotherColor2);
+  color: var(--anotherColor3);
   font-weight: 700  ;
 }
 
