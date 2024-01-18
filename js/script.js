@@ -29,3 +29,22 @@ navAlist.forEach(navlistA =>{
 
 });
 
+
+
+
+function downloadcv (){
+
+let path = '../assets/downloads/Jericho-Paningbatan-Resume.pdf'
+let a = document.createElement('a');
+
+a.href = path;
+a.download = 'Jericho-Paningbatan-Resume.pdf';
+
+document.body.appendChild(a);
+a.click();
+document.body.removeChild(a);
+
+}
+
+
+
