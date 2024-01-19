@@ -22,6 +22,11 @@
   --logo-font: 35px;
   --font-styles:"Titillium Web", sans-serif;
   --font-styles2:"Anton", sans-serif;
+
+  --one-rem: 1rem;
+  --second-rem: 1.2rem;
+  --third-rem: 1.3rem;
+
 }
 body{
 
@@ -323,14 +328,16 @@ position: relative;
 .second-sec{
 
   background-color: var(--anotherColor4);
-  z-index: 1000;
+  z-index: 6;
   margin-top: 5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
   width: 100%;
-  height: 80vh;
+  height: auto;
+  position: relative;
   border-top: 2px dotted whitesmoke;
 }
 .second-sec h1{
@@ -385,9 +392,373 @@ left: 19px;
   color: var(--anotherColor3);
   font-weight: 700  ;
 }
+.card-body p{
+
+  font-size: var(--one-rem);
+  font-family: var(--font-styles);
+
+}
 
 
+.percentage-skill{
+  position: relative;
+  text-align: center;
+  width: 100%;
+  padding: 40px;
+  margin-top: 25px;
+}
+.percent, .percent2{
+  position: relative;
 
+  width: 50%;
+  padding: 10px;
+  border: 2px solid cadetblue;
+  border-radius: 5px;
+} 
+.percent2{
+
+  float: right;
+  margin-top: 50px;
+}
+.percent h3, .percent2 h3{
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: var(--third-rem);
+  color: var(--tertiary-color);
+  margin-bottom: 50px;
+}
+
+.graphics{
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px;
+}
+
+
+.h4-con{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+
+.img-css{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: -60px;
+} 
+.img-html{
+
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: -50px;
+}
+
+.img-js{
+
+  width: 40px ;
+  height: 40px ;
+  position: relative;
+  left: -30px;
+}
+.img-react{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: -60px;
+} 
+.img-bootsrap{
+
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: -50px;
+}
+
+.graphics h4{
+
+  color: var(--tertiary-color);
+  font-size: var(--one-rem);
+  text-transform: uppercase;
+}
+
+.graph-con{
+  display: flex;
+  width: 50%;
+  position: relative;
+
+}
+.tool{
+  position: absolute;
+  color: var(--tertiary-color);
+  background-color: green;
+  width: 20%;
+  border: 2px  solid salmon;
+  transform: translateY(-40px);
+  border-radius: 5px;
+  font-size: 0.8rem;
+  z-index: 6;
+}
+.tool::before{
+  position: absolute;
+  content: '';
+  border: 5px solid green;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  z-index: -10;
+  border-bottom-right-radius: 1000px;
+}
+
+.tooltip1{
+  left: 81%;
+  animation: TooltipAni 2.5s ease ;
+
+}
+.tooltip2{
+  left: 51%;
+  animation: TooltipAni 2.5s ease ;
+
+}
+.tooltip3{
+  left: 11%;
+    animation: TooltipAni 2.5s ease ;
+
+}
+
+.tooltip4{
+  left: 6%;
+    animation: TooltipAni 2.5s ease ;
+
+}
+.tooltip5{
+  left: 41%;
+    animation: TooltipAni 2.5s ease ;
+
+}
+
+.graphics .graph1{
+  
+  height: 25px;
+  width: 90%;
+  background-image: repeating-linear-gradient(to right, #e84393, #259784,#aa254d);
+  border-right: 2px solid wheat;
+  position: absolute;
+  animation: htmlPercent 2.5s ease ;
+  border-top-left-radius: 10px;
+  top: -15px;
+  border: 2px solid rgb(180, 192, 184);
+  border-right: 0;
+  z-index: 5;
+}
+.percent-txt1{
+
+  height: 25px;
+  background-color: rgb(62, 64, 65);
+  width: 100%;
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  top: -15px;
+  border-radius: 10px;
+  border: 2px solid rgb(180, 192, 184);
+
+}
+
+.graphics .graph2{
+
+  height: 25px;
+  width: 60%;
+  background-image: repeating-linear-gradient(to right, #e84393, #259784,#aa254d);
+  border-right: 2px solid wheat;
+  animation: cssPercent 2.5s ease ;
+  position: absolute;
+  z-index: 5;
+  top: -15px;
+  border: 2px solid rgb(180, 192, 184);
+  border-right: 0;
+  border-top-left-radius: 10px;
+
+}
+.percent-txt2{
+
+  height: 25px;
+  background-color: rgb(62, 64, 65);
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  top: -15px;
+  border: 2px solid rgb(180, 192, 184);
+  border-radius: 10px;
+
+}
+
+.graphics .graph3{
+
+  height: 25px;
+  width: 20%;
+  background-image: repeating-linear-gradient(to right, #e84393, #259784,#aa254d);
+  border-right: 2px solid wheat;
+  position: absolute;
+  animation: jsPercent 2.5s ease ;
+  top: -15px;
+  border: 2px solid rgb(180, 192, 184);
+  border-right: 0;
+  z-index: 5;
+  border-top-left-radius: 10px;
+
+}
+.percent-txt3{
+
+  height: 25px;
+  background-color: rgb(62, 64, 65);
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  top: -15px;
+  border: 2px solid rgb(180, 192, 184);
+  border-radius: 10px;
+
+}
+
+
+.graphics .graph4{
+  
+  height: 25px;
+  width: 15%;
+  background-image: repeating-linear-gradient(to right, #e84393, #259784,#aa254d);
+  border-right: 2px solid wheat;
+  position: absolute;
+  animation: reactPercent 2.5s ease ;
+  border-top-left-radius: 10px;
+  top: -15px;
+  border: 2px solid rgb(180, 192, 184);
+  border-right: 0;
+  z-index: 5;
+}
+.percent-txt4{
+
+  height: 25px;
+  background-color: rgb(62, 64, 65);
+  width: 100%;
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  top: -15px;
+  border-radius: 10px;
+  border: 2px solid rgb(180, 192, 184);
+
+}
+
+
+.graphics .graph5{
+  
+  height: 25px;
+  width: 50%;
+  background-image: repeating-linear-gradient(to right, #e84393, #259784,#aa254d);
+  border-right: 2px solid wheat;
+  position: absolute;
+  animation: bootsrapPercent 2.5s ease ;
+  border-top-left-radius: 10px;
+  top: -15px;
+  border: 2px solid rgb(180, 192, 184);
+  border-right: 0;
+  z-index: 5;
+}
+.percent-txt5{
+
+  height: 25px;
+  background-color: rgb(62, 64, 65);
+  width: 100%;
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  top: -15px;
+  border-radius: 10px;
+  border: 2px solid rgb(180, 192, 184);
+
+}
+
+@keyframes htmlPercent {
+
+  0%{
+    width: 0;
+  }
+  100%{
+
+    width: 90%
+
+  }
+  
+}
+
+@keyframes cssPercent {
+
+  0%{
+    width: 0;
+  }
+  100%{
+
+    width: 60%
+
+  }
+  
+}
+
+@keyframes jsPercent {
+
+  0%{
+    width: 0;
+  }
+  100%{
+
+    width: 20%
+
+  }
+  
+}
+@keyframes reactPercent {
+
+  0%{
+    width: 0;
+  }
+  100%{
+
+    width: 15%
+
+  }
+  
+}
+@keyframes bootsrapPercent{
+
+  0%{
+    width: 0;
+  }
+  100%{
+
+    width: 50%
+
+  }
+  
+}
+@keyframes TooltipAni {
+   from{
+    transform: scale(0) translateY(-50px);
+
+      left: -20%;
+    }
+    to{
+      transform:scale(1.2) translateY(-50px);
+
+    }
+}
 
 /* footer */
 footer{
@@ -439,7 +810,7 @@ footer{
   .second-sec{
 
     
-    height: 80vh;
+    height: auto;
   }
   
   .custom-shape-divider-bottom-1705554803 {
@@ -524,11 +895,17 @@ footer{
     color: var(--anotherColor3);
     font-weight: 700  ;
   }
+ 
   
   
   .custom-shape-divider-bottom-1705554803 {
     
     top: 77%;
+  }
+  .percent, .percent2{
+
+    width: 100%;
+
   }
 
 }
@@ -652,26 +1029,31 @@ footer{
 .text-con h1{
 
   font-size: 2.2em;
+  text-align: left;
 
-}
+} 
 
 .text-con h3{
 
   color: var(--anotherColor);
   font-size: 1.7em;
+  text-align: left;
+
 }
 .myname-span{
 
 
   color: var(--anotherColor2);
+  text-align: left;
 
 }
 .text-con .hi-txt{
 
-  font-size: 1.2em;
-
+  font-size: 1em;
+  text-align: left;
 }
 .text-con p{
+  text-align: left;
 
   font-size: 0.6em;
 }
@@ -687,7 +1069,7 @@ footer{
 .btn-con button{
 
   margin-top: 5px;
-
+  width: 10em   ;
 }
 .social-con{
   display: flex;
@@ -725,6 +1107,12 @@ footer{
 
 @media only screen and (max-width: 480px){
 
+  .nav-hamburger{
+
+    right: 0.7em;
+  
+  }
+
   .second-sec h1{
 
    margin-top: 15px;
@@ -734,5 +1122,69 @@ footer{
     border-top: 2px dotted whitesmoke;
     margin-top:0;
   }
+
+
+
+  .box-skill{
+    padding: 0;
+  }
+
+  .percentage-skill{
+
+    padding: 0;
+  }
+  .percentage-skill
+  .percent{
+
+    padding: 5px;
+
+  }
+
+  .img-css{
+    width: 45px;
+    height: 45px;
+    position: relative;
+    left: -45px;
+  } 
+  .img-html{
   
+    width: 45px;
+    height: 45px;
+    position: relative;
+    left: -35px;
+  }
+  .img-js{
+  
+    width: 35px ;
+    height: 35px ;
+    position: relative;
+    left: -15px;
+  }
+  .img-react{
+  
+    width: 35px ;
+    height: 35px ;
+    position: relative;
+    left: -25px;
+  }
+  .img-bootsrap{
+  
+    width: 30px ;
+    height: 30px ;
+    position: relative;
+    left: -15px;
+  }
+  .tool{
+
+    width: 25%;
+
+  }
+}
+@media only screen and (max-width: 390px){
+
+ .percent, .percent2{
+
+  padding: 0;
+ }
+ 
 }
