@@ -15,6 +15,7 @@ function xClick(){
   if (check) {
     navMenu.style.display = 'none';
     faX.style.display = 'block';
+    
   } else {
     navMenu.style.display = 'block';
     faX.style.display = 'none';

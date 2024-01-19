@@ -937,6 +937,15 @@ footer{
     }
     
   }
+
+  @keyframes navBtnAni {
+    to{ 
+      transform: rotate(0);
+    }
+    from{
+      transform: rotate(260 deg) scale(1.2);
+    }
+  }
   
 
   .nav-hamburger i{
@@ -947,6 +956,12 @@ footer{
     font-size: var(--logo-font);
     color: var(--anotherColor);
     top: 32%;
+  }
+  .navbarIAni{
+
+    animation: navBtnAni 0.5s ease-in-out;
+
+
   }
   .nav-hamburger .fa-bars{
 
