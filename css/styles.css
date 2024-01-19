@@ -551,7 +551,6 @@ left: 19px;
   background-image: repeating-linear-gradient(to right, #e84393, #259784,#aa254d);
   border-right: 2px solid wheat;
   position: absolute;
-  animation: htmlPercent 2.5s ease ;
   border-top-left-radius: 10px;
   top: -15px;
   border: 2px solid rgb(180, 192, 184);
@@ -578,7 +577,6 @@ left: 19px;
   width: 60%;
   background-image: repeating-linear-gradient(to right, #e84393, #259784,#aa254d);
   border-right: 2px solid wheat;
-  animation: cssPercent 2.5s ease ;
   position: absolute;
   z-index: 5;
   top: -15px;
@@ -607,7 +605,6 @@ left: 19px;
   background-image: repeating-linear-gradient(to right, #e84393, #259784,#aa254d);
   border-right: 2px solid wheat;
   position: absolute;
-  animation: jsPercent 2.5s ease ;
   top: -15px;
   border: 2px solid rgb(180, 192, 184);
   border-right: 0;
@@ -636,7 +633,6 @@ left: 19px;
   background-image: repeating-linear-gradient(to right, #e84393, #259784,#aa254d);
   border-right: 2px solid wheat;
   position: absolute;
-  animation: reactPercent 2.5s ease ;
   border-top-left-radius: 10px;
   top: -15px;
   border: 2px solid rgb(180, 192, 184);
@@ -665,7 +661,6 @@ left: 19px;
   background-image: repeating-linear-gradient(to right, #e84393, #259784,#aa254d);
   border-right: 2px solid wheat;
   position: absolute;
-  animation: bootsrapPercent 2.5s ease ;
   border-top-left-radius: 10px;
   top: -15px;
   border: 2px solid rgb(180, 192, 184);
@@ -683,6 +678,42 @@ left: 19px;
   top: -15px;
   border-radius: 10px;
   border: 2px solid rgb(180, 192, 184);
+
+}
+
+.html-scrolljs{
+
+
+  animation:  htmlPercent 2.5s ease ;
+}
+
+
+.css-scrolljs{
+
+
+  animation: cssPercent 2.5s ease ;
+
+
+}
+.js-scrolljs{
+
+
+  animation: jsPercent 2.5s ease ;
+
+
+}
+.react-scrolljs{
+
+
+  animation: reactPercent 2.5s ease ;
+
+
+}
+.bootsrap-scrolljs{
+
+
+  animation: bootsrapPercent 2.5s ease ;
+
 
 }
 
