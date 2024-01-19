@@ -13,11 +13,11 @@
   --secondary-color:rgba(22, 24, 26, 1);
   --tertiary-color:#f5f6fa;
 
-  --anotherColor:#c91e1e;
+  --anotherColor:#00b894;
   --anotherColor2:  #045b94;
   --anotherColor3:  #1a7fc2;
   --anotherColor4: #122835 ;
-
+  --anotherColor5:#d63031;
 
   --logo-font: 35px;
   --font-styles:"Titillium Web", sans-serif;
@@ -62,7 +62,7 @@ nav{
   font-size: var(--logo-font);
   font-family: var(--font-styles2);
 
-  color: var(--anotherColor2);
+  color: var(--anotherColor5);
 }
 .highlight{
 
@@ -108,11 +108,11 @@ nav{
   font-weight: 600;
 }
 
-.nav-hamburger{
+.nav-hamburger i{
 
   display: none;
-
 }
+
 .mob-btns{
 
   display: none;
@@ -139,7 +139,7 @@ position: relative;
 }
 .aNav:hover{
 
-  color: var(--anotherColor2);
+  color: var(--anotherColor);
   transition: 0.5s ease-in-out;
 }
 @keyframes animationHover {
@@ -175,11 +175,11 @@ position: relative;
   position: relative;
   width: 28.125em;
   height: 28.125em;
-  background-color: var(--anotherColor2);
+  background-color: var(--anotherColor);
   border-radius: 50%;
   left: 50px;
   top: 20px;
-  filter: brightness(0.9);
+  filter: brightness(0.8);
 
 
 }
@@ -222,7 +222,7 @@ position: relative;
 .myname-span{
 
 
-  color: var(--anotherColor2);
+  color: var(--anotherColor5);
 
 }
 .text-con .hi-txt{
@@ -246,7 +246,7 @@ position: relative;
   height: 3em;
   font-size: 1em;
   cursor: pointer;
-  background-color: var(--anotherColor2);
+  background-color: var(--anotherColor5);
   outline: none;
   border: none;
   color: var(--tertiary-color);
@@ -269,7 +269,7 @@ position: relative;
   font-weight: bold;
   margin-left: 10px;
   border-radius: 5px;
-  border: 2px solid var(--anotherColor2);
+  border: 2px solid var(--anotherColor5);
   user-select: none;
   z-index: 999;
 
@@ -288,9 +288,9 @@ position: relative;
   align-items: center;
   color: #f5f6fa;
   margin-left: 15px;
-  font-size: 25px;
+  font-size: 20px;
   width: 40px;
-  border: 2px solid var(--anotherColor);
+  border: 2px solid #00b894;
   border-radius: 50%;
   height: 40px;
   cursor: pointer;
@@ -298,27 +298,8 @@ position: relative;
   text-decoration: none;
   cursor: pointer;
 }
-.social-con .fa-facebook{
-
-  background-color: #126094;
-
-}
-.social-con .fa-instagram{
-
-  background-color: #830a65;
-
-}
-.social-con .fa-linkedin{
-
-  background-color: #063264;
-
-}
-.social-con .fa-github{
-
-  background-color: #2c2b2c;
 
 
-}
 
 
 
@@ -375,7 +356,7 @@ left: 19px;
 }
 .card{
 
-  border: 2px solid var(--anotherColor2);
+  border: 2px solid var(--anotherColor);
   background-color: rgba(201, 30, 30, 0.733);
   color: var(--tertiary-color);
   width: 18rem;
@@ -389,7 +370,7 @@ left: 19px;
 }
 .card-body h5{
 
-  color: var(--anotherColor3);
+  color: var(--anotherColor);
   font-weight: 700  ;
 }
 .card-body p{
@@ -806,7 +787,7 @@ footer{
 }
 .links-imp{
 
-  color: var(--anotherColor);
+  color: var(--anotherColor5);
   width: 100%;
 }
 .links-imp ul{
@@ -908,8 +889,8 @@ footer{
   }
   .card{
 
-    border: 2px solid var(--anotherColor2);
-    background-color: rgb(100, 10, 10);
+    border: 2px solid var(--anotherColor);
+    background-color: var(--anotherColor5);
     color: var(--tertiary-color);
     width: 100%;
     margin-top: 5px;
@@ -923,7 +904,7 @@ footer{
   }
   .card-body h5{
   
-    color: var(--anotherColor3);
+    color: var(--anotherColor);
     font-weight: 700  ;
   }
  
@@ -958,15 +939,24 @@ footer{
   }
   
 
-  .nav-hamburger{
+  .nav-hamburger i{
 
-    display: block;
     cursor: pointer;
     position: absolute;
-    right: 1.2em;
+    right: 0.8em;
     font-size: var(--logo-font);
-    color: var(--anotherColor2);
+    color: var(--anotherColor);
+    top: 32%;
   }
+  .nav-hamburger .fa-bars{
+
+    display: block;
+
+  }
+
+  
+  
+
   
   .nav-list{
 
@@ -1074,7 +1064,7 @@ footer{
 .myname-span{
 
 
-  color: var(--anotherColor2);
+  color: var(--anotherColor5);
   text-align: left;
 
 }

@@ -1,12 +1,51 @@
-
-let navMenu = document.querySelector('.nav-hamburger');
+let navMenu = document.querySelector('.fa-bars');
 let navList = document.querySelector('.nav-list');
+let faX = document.querySelector('.fa-x');
+let check = true;
 
-navMenu.addEventListener('click', () =>{
+navMenu.addEventListener('click', barClick)
+faX.addEventListener('click', xClick)
+
+
+
+function xClick(){
 
   navList.classList.toggle('nav-list-click');
 
-});
+  if (check) {
+    navMenu.style.display = 'none';
+    faX.style.display = 'block';
+  } else {
+    navMenu.style.display = 'block';
+    faX.style.display = 'none';
+  }
+
+  check = !check;
+
+};
+
+function barClick(){
+
+  navList.classList.toggle('nav-list-click');
+
+  if (check) {
+    navMenu.style.display = 'none';
+    faX.style.display = 'block';
+  } else {
+    navMenu.style.display = 'block';
+    faX.style.display = 'none';
+  }
+
+  check = !check;
+
+};
+
+
+
+
+
+
+
 
 
 
@@ -28,6 +67,8 @@ navAlist.forEach(navlistA =>{
   });
 
 });
+
+
 
 
 
