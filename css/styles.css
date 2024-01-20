@@ -122,7 +122,7 @@ nav{
   font-weight: 600;
 }
 
-.nav-hamburger i{
+.nav-hamburger {
 
   display: none;
 }
@@ -1029,6 +1029,98 @@ footer{
 }
 
 
+.announce-con{
+
+  display: flex;
+  align-self:  center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #045b94;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: none;
+}
+.announce-cons{
+
+  display: block;
+  animation: modalAnnounceAni 0.5s ease-in-out ;
+}
+
+@keyframes modalAnnounceAni {
+
+  to{
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  from{
+    opacity: 0.1;
+  }
+  
+}
+
+
+.box-announce{
+  position: relative;
+  background-color: var(--anotherColor4);
+  width: 50%;
+  height: auto;
+  align-self: center;
+  border-radius: 5px;
+  scroll-behavior: auto;
+  padding-block: 20px;
+  padding-inline: 20px;
+  box-shadow: 0 5px 10px rgba(55, 173, 169, 0.4);
+  align-self: center;
+  top: 24%;
+  left: 24%;
+
+}
+.box-announce i{
+
+  position: absolute;
+  right: 5%;
+  color: var(--anotherColor);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.img-announce {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-self: center;
+
+}
+.img-announce img{
+
+  width: 200px;
+  height: 200px;
+
+}
+.announce-text{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.announce-text h1{
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--tertiary-color);
+}
+.announce-text p{
+  margin-top: 5px;
+  color: var(--tertiary-color);
+  font-size: 1rem;
+}
+
+
 
 
 
@@ -1235,8 +1327,11 @@ footer{
     }
   }
   
+  .nav-hamburger{
+    display: block;
+  }
 
-  .nav-hamburger i{
+  .nav-hamburger>i{
 
     cursor: pointer;
     position: absolute;
@@ -1251,9 +1346,14 @@ footer{
 
 
   }
-  .nav-hamburger .fa-bars{
+  .nav-hamburger>.fa-bars{
 
     display: block;
+
+  }
+  .nav-hamburger .fa-x{
+
+    display: none;
 
   }
 
@@ -1344,6 +1444,15 @@ footer{
     margin-top: 3em;
   }
   
+  /* modal */
+
+  .box-announce{
+
+    width: 70%;
+    top: 22%;
+    left: 15%;
+  }
+
 }
 
 
@@ -1404,6 +1513,11 @@ footer{
   text-align: center;
   margin-left: 0;
   margin-top: 3rem;
+  
+}
+.box-announce{
+  top: 15%;
+  width: 72%;
 
 }
 
@@ -1508,7 +1622,27 @@ footer{
     width: 25%;
 
   }
+  .box-announce{
+
+    width: 85%;
+    top: 15%;
+    left: 8%;
+    padding-block: 12px;
+    padding-inline: 10px;
+  
+  }
+  .announce-text h1{
+
+    font-size: 1.5rem;
+
+  }
+  .announce-text p{
+
+    font-size: 1rem;
+
+  }
 }
+
 @media only screen and (max-width: 390px){
 
  .percent, .percent2{

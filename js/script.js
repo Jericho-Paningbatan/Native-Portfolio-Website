@@ -319,3 +319,48 @@ function addbootsrap() {
 
 // Listen for scroll events and call handleScroll function
 window.addEventListener('scroll', handleScroll);
+
+
+
+
+
+
+var announceCon = document.querySelector('.announce-con');
+let navlinkS = document.querySelectorAll('.a');
+let exiTModal = document.querySelector('.box-announce > .fa-x');
+
+navlinkS.forEach(navlinK => {
+  
+  navlinK.addEventListener('click', (event) =>{
+    announceCon.classList.add('announce-cons');
+    document.body.style.overflow = 'hidden';
+    event.preventDefault();
+
+
+  });
+
+});
+
+let navBtns = document.querySelectorAll('.buttons');
+
+navBtns.forEach(navbtns => {
+  
+  navbtns.addEventListener('click', (e) =>{
+    announceCon.classList.add('announce-cons');
+    document.body.style.overflow = 'hidden';
+    e.preventDefault();
+
+
+  });
+
+});
+
+
+exiTModal.addEventListener('click', () =>{
+
+  announceCon.classList.remove('announce-cons');
+  document.body.style.overflow = 'auto';
+
+
+});
+
