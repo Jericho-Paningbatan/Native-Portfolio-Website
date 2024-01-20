@@ -357,26 +357,29 @@
 
 
 
-
 <!-- Messenger Chat Plugin Code -->
 <div id="fb-root"></div>
 
 <!-- Your Chat Plugin code -->
-<div id="fb-customer-chat" class="fb-customerchat">
+<div id="fb-customer-chat" class="fb-customerchat" attribution="biz_inbox">
 </div>
 
 <script>
   var chatbox = document.getElementById('fb-customer-chat');
   chatbox.setAttribute("page_id", "229307256921178");
   chatbox.setAttribute("attribution", "biz_inbox");
+
+  // Set greetings for logged in and logged out users
+  chatbox.setAttribute("logged_in_greeting", "Welcome back! How can we assist you today?");
+  chatbox.setAttribute("logged_out_greeting", "Welcome! How can we assist you today?");
 </script>
 
 <!-- Your SDK code -->
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      xfbml            : true,
-      version          : 'v18.0'
+      xfbml: true,
+      version: 'v18.0'
     });
   };
 
@@ -387,6 +390,8 @@
     js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 </script>
 
 
