@@ -362,17 +362,21 @@
 <div id="fb-root"></div>
 
 <!-- Your Chat Plugin code -->
-<div class="custom-fb-customerchat" page_id="229307256921178" attribution="biz_inbox">
-  <!-- Add any additional customization here -->
-  <div class="custom-greeting">Welcome to Our Website! How can we assist you today?</div>
+<div id="fb-customer-chat" class="fb-customerchat">
 </div>
+
+<script>
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "229307256921178");
+  chatbox.setAttribute("attribution", "biz_inbox");
+</script>
 
 <!-- Your SDK code -->
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      xfbml: true,
-      version: 'v18.0'
+      xfbml            : true,
+      version          : 'v18.0'
     });
   };
 
@@ -384,7 +388,6 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 </script>
-
 
 
 </body>
