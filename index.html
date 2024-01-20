@@ -361,36 +361,62 @@
 
 
 
-  <!-- Messenger Chat Plugin Code -->
-  <div id="fb-root"></div>
 
-  <!-- Your Chat Plugin code -->
-  <div id="fb-customer-chat" class="fb-customerchat">
-  </div>
+<!-- Facebook SDK -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '741365177625785',
+      xfbml      : true,
+      version    : 'v12.0'
+    });
+  };
 
-  <script>
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "229307256921178");
-    chatbox.setAttribute("attribution", "biz_inbox");
-  </script>
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
 
-  <!-- Your SDK code -->
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        xfbml            : true,
-        version          : 'v18.0'
-      });
-    };
+<!-- Add Facebook Messenger Plugin -->
+<div id="fb-root"></div>
+<script>
+  // Replace 'YOUR_PAGE_ID' with your Facebook Page ID
+  var pageId = '229307256921178';
 
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
+  // Replace 'your-greeting-text' with the greeting text you want to display
+  var greetingText = 'Hello! How can we help you today?';
+
+  // Initialize Facebook Messenger Plugin
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v12.0'
+    });
+
+    // Add Messenger Plugin
+    FB.CustomerChat.showDialog({
+      page_id: pageId,
+      greeting_dialog_display: 'show',
+      greeting_dialog_delay: 10,
+      greeting_dialog_timeout: 30,
+      greeting: greetingText,
+    });
+  };
+
+  // Load Facebook SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
