@@ -71,6 +71,67 @@ navAlist.forEach(navlistA =>{
 
 
 
+let infoWebcon = document.querySelector('.info-webcon');
+let openInfoBtn = document.querySelector('.btn-info-web');
+let openInfoBtn2 = document.querySelector('.btn-info-web2');
+
+let lessthan = document.querySelector('.btn-info-web .fa-less-than');
+let greaterthan = document.querySelector('.btn-info-web .fa-greater-than');
+
+let clickisTrue = true;
+
+
+openInfoBtn.addEventListener('click', openInfowebcon)
+openInfoBtn2.addEventListener('click', open2Infowebcon)
+
+
+function openInfowebcon (){
+
+  if(clickisTrue){
+    openInfoBtn.style.left = '49.6%';
+    lessthan.style.display = 'block';
+    greaterthan.style.display = 'none';
+    infoWebcon.classList.add('info-webconJS');
+  }else{
+
+    greaterthan.style.display = 'block';
+    lessthan.style.display = 'none';
+    infoWebcon.classList.remove('info-webconJS');
+    openInfoBtn.style.left = '';
+
+  }
+
+  clickisTrue = !clickisTrue;
+
+};
+
+
+function open2Infowebcon (){
+
+let readBtn = document.querySelector('.readbtn');
+let closeBtn = document.querySelector('.closebtn');
+
+
+  if(clickisTrue){
+    
+    readBtn.style.display = 'none';
+    closeBtn.style.display = 'block';
+
+    infoWebcon.classList.add('info-webconJS');
+  }else{
+
+    readBtn.style.display = 'block';
+    closeBtn.style.display = 'none';
+
+    infoWebcon.classList.remove('info-webconJS');
+
+  }
+
+  clickisTrue = !clickisTrue;
+
+};
+
+
 
 
 

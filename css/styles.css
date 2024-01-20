@@ -27,11 +27,26 @@
   --second-rem: 1.2rem;
   --third-rem: 1.3rem;
 
+  --btn-Animation: btnAni 0.5s ease-in-out ;
 }
+@keyframes btnAni {
+  0%{
+    
+    transform: scale(1.2)
+    
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+
+
 body{
 
   background-color: var(--main-color);
   font-family: var(--font-styles);
+  
 }
 header{
   width: 100%;
@@ -274,6 +289,13 @@ position: relative;
   z-index: 999;
 
 }
+.btn-con button:hover{
+
+  opacity: 0.8;
+  background-color: #04725c;
+  border: 2px solid #00b894;
+  transition:  0.5s ease-out; 
+}
 
 .social-con{
   margin-top: 5%;
@@ -297,6 +319,11 @@ position: relative;
   z-index: 999 ;
   text-decoration: none;
   cursor: pointer;
+}
+.social-con a:hover,.social-con i:hover{
+
+  animation: var(--btn-Animation);
+  opacity: 0.8;
 }
 
 
@@ -350,7 +377,6 @@ left: 19px;
   padding: 20px;
   margin-top: 20px;
   border: 1px solid var(--main-color);
-  background: linear-gradient(to right, #131d24,#272a2b);
   border-radius: 5px;
   margin-bottom: 25px;
 }
@@ -388,13 +414,37 @@ left: 19px;
   padding: 40px;
   margin-top: 25px;
 }
+
+.percent-intro{
+  width: 60%;
+  text-align: left;
+  color: #00b894;
+}
+.percent-intro h2{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.percent-intro p{
+
+  font-size: var(--one-rem);
+  color: whitesmoke;
+}
+.percent-container{
+
+  display: flex;
+  gap: 5px;
+}
+
 .percent, .percent2{
   position: relative;
 
   width: 50%;
-  padding: 10px;
   border: 2px solid cadetblue;
   border-radius: 5px;
+  margin-top: 50px;
+  z-index: 5;
+  padding-block: 20px;
 } 
 .percent2{
 
@@ -408,6 +458,89 @@ left: 19px;
   color: var(--tertiary-color);
   margin-bottom: 50px;
 }
+
+
+.btn-info-web{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  left: 49.9%;
+  top: 40%;
+  background-color: rgba(22, 24, 26, 0.5);
+  border: 2px solid rgba(87, 51, 51, 0.5);
+
+  cursor: pointer;
+  z-index: 1;
+  color: whitesmoke;
+  user-select: none;
+  border-left: none;
+  
+}
+.btn-info-web:hover{
+  
+  transform: scale(1.1);
+  width: 45px;
+
+}
+
+.btn-info-web .fa-less-than{
+
+  display: none;
+}
+.btn-info-web2{
+
+  display: none;
+}
+
+
+.info-webcon{
+  width: 50%;
+  background-color: rgba(29, 28, 28, 0.3);
+  margin-top: 50px;
+  border: 2px solid cadetblue;
+  border-radius: 5px;
+  animation: btn-infowebAni 0.8s ease-in;
+  display: none;
+  user-select: none;
+  text-align: left;
+  padding-block: 30px;
+  padding-inline: 55px;
+  color: #00b894;
+  transition: all 0.3s ease-in-out;
+}
+.info-webcon p{
+  margin-top: 30px;
+  color: whitesmoke;
+  text-align: justify;
+  font-size: 0.9rem;
+}
+
+.info-webconJS{
+
+  animation: btn-infowebAni 0.5s ease-in;
+  display: block;
+}
+@keyframes btn-infowebAni {
+  0%,30%, 50% {
+
+      transform: translateX(-500px);
+      opacity: 0;
+
+  }
+  90%, 100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  
+}
+
+
+
+
 
 .graphics{
   position: relative;
@@ -890,7 +1023,7 @@ footer{
   .card{
 
     border: 2px solid var(--anotherColor);
-    background-color: var(--anotherColor5);
+    background-color: rgb(95, 11, 11);
     color: var(--tertiary-color);
     width: 100%;
     margin-top: 5px;
@@ -914,12 +1047,56 @@ footer{
     
     top: 77%;
   }
+  .percent-container{
+    display: flex;
+    flex-direction: column;
+
+  }
   .percent, .percent2{
 
     width: 100%;
 
   }
+  .percent-intro{
+    width: 100%;
+  }
+  .info-webcon{
 
+    width: 100%;
+    padding-block: 15px;
+    padding-inline: 15px;
+  }
+
+  .btn-info-web{
+
+    display: none;
+  
+  }
+  .btn-info-web2{
+
+    width: 100%;
+    height: 40px;
+    background-color: #045b94;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(22, 24, 26, 0.5);
+    border: 2px solid rgba(87, 51, 51, 0.5);
+  }
+
+  .btn-info-web2 .readbtn, .btn-info-web2 .closebtn{
+
+    font-size: 1rem;
+    color: whitesmoke;
+    margin-top: 5px;
+
+  }
+
+  .closebtn{
+
+    display: none;
+
+  }
 }
 
 @media only screen and (max-width: 819px){
