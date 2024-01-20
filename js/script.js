@@ -341,9 +341,9 @@ navlinkS.forEach(navlinK => {
 
 });
 
-let navBtns = document.querySelectorAll('.buttons');
+let mobBtns = document.querySelectorAll('.buttons');
 
-navBtns.forEach(navbtns => {
+mobBtns.forEach(navbtns => {
   
   navbtns.addEventListener('click', (e) =>{
     announceCon.classList.add('announce-cons');
@@ -354,6 +354,25 @@ navBtns.forEach(navbtns => {
   });
 
 });
+
+let navBtns = document.querySelectorAll('.link-btns');
+
+navBtns.forEach(navbTns => {
+  
+  navbTns.addEventListener('click', (e) =>{
+    announceCon.classList.add('announce-cons');
+    document.body.style.overflow = 'hidden';
+    e.preventDefault();
+
+
+  });
+
+});
+
+
+
+
+
 
 
 exiTModal.addEventListener('click', () =>{
