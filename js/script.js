@@ -383,3 +383,25 @@ exiTModal.addEventListener('click', () =>{
 
 });
 
+
+
+
+
+let searchIcon = document.querySelector('.nav-btns > .search-icon');
+let searchBar = document.querySelector('.searchbar');
+
+searchIcon.addEventListener('click', () => {
+
+  searchBar.classList.toggle('searBarani');
+
+});
+
+
+let searchIcons = document.querySelector('nav > .search-icon');
+let searchBars = document.querySelector('.searchbar');
+
+searchIcons.addEventListener('click', () => {
+
+  searchBars.classList.toggle('searBarani');
+
+});

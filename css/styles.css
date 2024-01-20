@@ -78,6 +78,12 @@ nav{
 
   color: var(--anotherColor5);
 }
+nav .search-icon{
+
+
+  display: none;
+
+}
 .highlight{
 
   color: var(--anotherColor);
@@ -97,6 +103,18 @@ nav{
   align-items: center;
   justify-content: center;
   gap: 45px;
+
+}
+.nav-btns .search-icon{
+
+  color: #00b894;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: block;
+}
+.nav-btns i:hover{
+
+  opacity: 0.5;
 
 }
 .nav-list{
@@ -156,6 +174,70 @@ position: relative;
   color: var(--anotherColor);
   transition: 0.5s ease-in-out;
 }
+
+.searchbar{
+ 
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(71, 90, 109, 0.5);
+  border: 2px solid var(--anotherColor);
+  right: 2%;
+  width: 30%;
+  height: 10%;
+  position: fixed;
+  z-index: 999;
+  display: none;
+}
+.searchInp {
+  position: relative;
+  width: 70%;
+  height: 80%;
+  padding-inline: 20px;
+  margin-right: 5px;
+  align-self: center;
+  background-color: #cccccc;
+  left: 15px;
+  top: 5px;
+  user-select: none;
+
+}
+
+.searchInp:focus{
+
+ outline-color: var(--anotherColor5);
+}
+
+.searchBarbtn{
+
+  width: 20%;
+  height: 80%;
+  background-color: var(--anotherColor5);
+  color: var(--tertiary-color);
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  left: 15px;
+  top: 5px;
+
+}
+.searBarani{
+  animation: searchbarAni 0.3s ease-in-out;
+  display: block;
+}
+
+@keyframes searchbarAni {
+
+  from{
+    transform: translateY(-200px);
+  }
+  to{
+    transform: translateY(0);
+  }
+  
+}
+
+
 @keyframes animationHover {
   0%{transform: translateX( -50px);}
   100%{transform: translateX(0);}
@@ -1335,6 +1417,16 @@ footer{
       transform: rotate(260 deg) scale(1.2);
     }
   }
+  nav .search-icon{
+
+    color: #00b894;
+    cursor: pointer;
+    font-size: 1.8rem;
+    display: block;
+    right: 15%;
+    position: absolute;
+    
+  }
   
   .nav-hamburger{
     display: block;
@@ -1415,6 +1507,7 @@ footer{
     display: none;
 
   }
+
   .mob-btns{
 
     display: flex;
@@ -1460,6 +1553,15 @@ footer{
     width: 70%;
     top: 22%;
     left: 15%;
+  }
+  /* searchbar */
+
+  .searchbar{
+ 
+    left: 1%;
+    width: 98%;
+    height: 7%;
+    z-index: 1000;
   }
 
 }
@@ -1555,6 +1657,14 @@ footer{
 
 @media only screen and (max-width: 480px){
 
+  nav .search-icon{
+
+  
+
+    right: 20%;
+    position: absolute;
+    
+  }
   .nav-hamburger{
 
     right: 0.7em;
