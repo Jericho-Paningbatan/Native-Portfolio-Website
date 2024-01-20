@@ -5,8 +5,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
-}
+  }
 :root{
 
   --main-color:rgba(22, 24, 26, 1);
@@ -347,6 +346,8 @@ position: relative;
   height: auto;
   position: relative;
   border-top: 2px dotted whitesmoke;
+  overflow-x: hidden;
+
 }
 .second-sec h1{
 

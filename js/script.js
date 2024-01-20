@@ -152,13 +152,16 @@ let clickisTrue2 = true;
 
 
 openInfoBtn3.addEventListener('click', openInfowebcon3)
-openInfoBtn4.addEventListener('click', open3Infowebcon)
+openInfoBtn4.addEventListener('click', open4Infowebcon)
 
 
 
 function openInfowebcon3 (){
 
   if(clickisTrue2){
+
+   
+
     lessthan2.style.display = 'block';
     greaterthan2.style.display = 'none';
     infoWebcon2.classList.add('info-webconJS2');
@@ -178,19 +181,22 @@ function openInfowebcon3 (){
 
 
 
-function open3Infowebcon (){
+function open4Infowebcon (){
 
   let readBtn2 = document.querySelector('.readbtn2');
   let closeBtn2 = document.querySelector('.closebtn2');
   
-  
+ 
     if(clickisTrue2){
       
+
+     
       readBtn2.style.display = 'none';
       closeBtn2.style.display = 'block';
   
       infoWebcon2.classList.add('info-webconJS2');
     }else{
+     
   
       readBtn2.style.display = 'block';
       closeBtn2.style.display = 'none';
