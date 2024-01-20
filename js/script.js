@@ -184,7 +184,7 @@ function open3Infowebcon (){
   let closeBtn2 = document.querySelector('.closebtn2');
   
   
-    if(clickisTrue){
+    if(clickisTrue2){
       
       readBtn2.style.display = 'none';
       closeBtn2.style.display = 'block';
@@ -199,7 +199,7 @@ function open3Infowebcon (){
   
     }
   
-    clickisTrue = !clickisTrue;
+    clickisTrue2 = !clickisTrue2;
   
   };
   

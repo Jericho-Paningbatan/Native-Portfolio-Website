@@ -1361,7 +1361,6 @@ footer{
   color: var(--anotherColor);
   font-size: 1.7em;
   text-align: left;
-
 }
 .myname-span{
 
@@ -1403,6 +1402,8 @@ footer{
 .text-con{
   text-align: center;
   margin-left: 0;
+  margin-top: 3rem;
+
 }
 
 }
@@ -1456,10 +1457,14 @@ footer{
 
     padding: 0;
   }
-  .percentage-skill
-  .percent{
+  .percentage-skill{
 
     padding: 5px;
+
+  }
+  .percent{
+
+    padding-block: 20px;
 
   }
 
