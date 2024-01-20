@@ -358,67 +358,33 @@
 
 
 
-
-
-
-
-<!-- Facebook SDK -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '741365177625785',
-      xfbml      : true,
-      version    : 'v12.0'
-    });
-  };
-
-  (function(d, s, id){
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'Messenger'));
-</script>
-
-<!-- Add Facebook Messenger Plugin -->
+<!-- Messenger Chat Plugin Code -->
 <div id="fb-root"></div>
+
+<!-- Your Chat Plugin code -->
+<div class="custom-fb-customerchat" page_id="229307256921178" attribution="biz_inbox">
+  <!-- Add any additional customization here -->
+  <div class="custom-greeting">Welcome to Our Website! How can we assist you today?</div>
+</div>
+
+<!-- Your SDK code -->
 <script>
-  // Replace 'YOUR_PAGE_ID' with your Facebook Page ID
-  var pageId = '229307256921178';
-
-  // Replace 'your-greeting-text' with the greeting text you want to display
-  var greetingText = 'Hello! How can we help you today?';
-
-  // Initialize Facebook Messenger Plugin
   window.fbAsyncInit = function() {
     FB.init({
-      xfbml            : true,
-      version          : 'v12.0'
-    });
-
-    // Add Messenger Plugin
-    FB.CustomerChat.showDialog({
-      page_id: pageId,
-      greeting_dialog_display: 'show',
-      greeting_dialog_delay: 10,
-      greeting_dialog_timeout: 30,
-      greeting: greetingText,
+      xfbml: true,
+      version: 'v18.0'
     });
   };
 
-  // Load Facebook SDK asynchronously
-  (function(d, s, id){
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'Messenger'));
-window.extAsyncInit = function() {
-  // the Messenger Extensions JS SDK is done loading 
-};
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
 </script>
+
 
 
 </body>
