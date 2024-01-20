@@ -1110,14 +1110,23 @@ footer{
   flex-direction: column;
 }
 .announce-text h1{
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: var(--tertiary-color);
+  text-transform: uppercase;
+  color: var(--anotherColor);
 }
 .announce-text p{
   margin-top: 5px;
   color: var(--tertiary-color);
-  font-size: 1rem;
+  font-size: 0.9rem;
+}
+.announce-text .developer-contact{
+
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #c91e1e;
+  font-weight: 600;
 }
 
 
