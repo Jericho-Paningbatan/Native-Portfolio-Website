@@ -8,7 +8,7 @@
   }
 :root{
 
-  --main-color:rgba(22, 24, 26, 1);
+  --main-color:#1b1b1b;
   --secondary-color:rgba(22, 24, 26, 1);
   --tertiary-color:#f5f6fa;
 
@@ -17,6 +17,8 @@
   --anotherColor3:  #1a7fc2;
   --anotherColor4: #122835 ;
   --anotherColor5:#d63031;
+
+  --anotherColor6:#183241;
 
   --logo-font: 35px;
   --font-styles:"Titillium Web", sans-serif;
@@ -75,8 +77,8 @@
 
 body{
 
-  background-color: var(--main-color);
   font-family: var(--font-styles);
+  background: linear-gradient(35deg, #183241, #131211);
   
 }
 header{
@@ -93,12 +95,13 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--secondary-color);
   min-height: 100px;
   border-bottom: 1px solid var(--tertiary-color);
   position: fixed;
   top: 0;
   z-index: 1000;
+  background: linear-gradient(35deg, #183241, #131211);
+
 
 }
 .nav-icon a{
@@ -289,11 +292,15 @@ position: relative;
 
 
 .main-sec{
-
+  position: relative;
   height: auto;
   width: 100%;
   margin-top: 100px;
+  z-index: -2;
+  background: linear-gradient(40deg, #183241, #131211);
 }
+
+
 .content-intro{
 
   display: flex;
@@ -310,28 +317,29 @@ position: relative;
 .img-con{
   position: relative;
   width: 28.125em;
-  height: 28.125em;
-  background-color: var(--anotherColor);
+  height: 28em;
+  background-color: rgba(45, 167, 140, 0.6);
   border-radius: 50%;
   left: 50px;
   top: 20px;
   filter: brightness(0.8);
+  
 
 
 }
 .img-con img{
   position: relative;
-  width: 25em;
-  height: 28.125em;
+  width: 28.125em;
+  height: 28em;
   border-radius: 80%;
-  left: 20px;
-  filter: brightness(1);
-
+  left: 0;
+  box-shadow: 5px px 10px rgba(0, 0, 0, 0.5);
 }
 
 .right-content{
   padding: 20px;
   width: 50%;
+  z-index: -2;
 }
 
 .text-con{
@@ -456,10 +464,10 @@ position: relative;
 /* section two */
 
 .second-sec{
+  background: linear-gradient(35deg, #183241, #131211);
 
   background-color: var(--anotherColor4);
   z-index: 6;
-  margin-top: 5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -468,10 +476,20 @@ position: relative;
   width: 100%;
   height: auto;
   position: relative;
-  border-top: 2px dotted whitesmoke;
-  overflow-x: hidden;
-
+  overflow: hidden;
+  padding-top: 85px;
+  border-top: 1px solid#1a282e;
 }
+.second-sec svg{
+
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -2;
+}
+
 .second-sec h1{
 
   font-weight: 600;
@@ -507,9 +525,33 @@ left: 19px;
 .card{
 
   border: 2px solid var(--anotherColor);
-  background-color: rgba(201, 30, 30, 0.733);
+  background-color: rgba(22, 24, 26, 0.5);
   color: var(--tertiary-color);
   width: 22rem;
+}
+.card-top1{
+
+  width: 100%;
+  height: 20px;
+  background-color: #b82500;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.card-top2{
+
+  width: 100%;
+  height: 20px;
+  background-color: #b8002e;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.card-top3{
+
+  width: 100%;
+  height: 20px;
+  background-color: #b8b500;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 .card-img-top{
 
@@ -540,19 +582,22 @@ left: 19px;
 }
 
 .percent-intro{
-  width: 60%;
+  width: 100%;
   text-align: left;
-  color: #00b894;
+  color: var(--anotherColor5);
 }
 .percent-intro h2{
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: bold;
+  text-align: center;
 }
 .percent-intro p{
-
+  text-transform: capitalize;
   font-size: var(--one-rem);
-  color: whitesmoke;
+  color: rgb(172, 171, 171);
+  text-align: justify;
+  margin-top: 50px;
 }
 .percent-container{
 
@@ -586,7 +631,7 @@ left: 19px;
   text-transform: uppercase;
   font-weight: 600;
   font-size: var(--third-rem);
-  color: var(--tertiary-color);
+  color: var(--anotherColor);
   margin-bottom: 50px;
 }
 
@@ -872,7 +917,6 @@ left: 19px;
   background-image: repeating-linear-gradient(to right, #e84393, #259784,#aa254d);
   border-right: 2px solid wheat;
   position: absolute;
-  border-top-left-radius: 10px;
   top: -15px;
   border: 2px solid rgb(180, 192, 184);
   border-right: 0;
@@ -887,7 +931,6 @@ left: 19px;
   position: absolute;
   left: 0;
   top: -15px;
-  border-radius: 10px;
   border: 2px solid rgb(180, 192, 184);
 
 }
@@ -903,7 +946,6 @@ left: 19px;
   top: -15px;
   border: 2px solid rgb(180, 192, 184);
   border-right: 0;
-  border-top-left-radius: 10px;
 
 }
 .percent-txt2{
@@ -915,7 +957,6 @@ left: 19px;
   z-index: 3;
   top: -15px;
   border: 2px solid rgb(180, 192, 184);
-  border-radius: 10px;
 
 }
 
@@ -930,7 +971,6 @@ left: 19px;
   border: 2px solid rgb(180, 192, 184);
   border-right: 0;
   z-index: 5;
-  border-top-left-radius: 10px;
 
 }
 .percent-txt3{
@@ -942,7 +982,6 @@ left: 19px;
   z-index: 3;
   top: -15px;
   border: 2px solid rgb(180, 192, 184);
-  border-radius: 10px;
 
 }
 
@@ -954,7 +993,6 @@ left: 19px;
   background-image: repeating-linear-gradient(to right, #e84393, #259784,#aa254d);
   border-right: 2px solid wheat;
   position: absolute;
-  border-top-left-radius: 10px;
   top: -15px;
   border: 2px solid rgb(180, 192, 184);
   border-right: 0;
@@ -969,7 +1007,6 @@ left: 19px;
   position: absolute;
   left: 0;
   top: -15px;
-  border-radius: 10px;
   border: 2px solid rgb(180, 192, 184);
 
 }
@@ -982,7 +1019,6 @@ left: 19px;
   background-image: repeating-linear-gradient(to right, #e84393, #259784,#aa254d);
   border-right: 2px solid wheat;
   position: absolute;
-  border-top-left-radius: 10px;
   top: -15px;
   border: 2px solid rgb(180, 192, 184);
   border-right: 0;
@@ -997,7 +1033,6 @@ left: 19px;
   position: absolute;
   left: 0;
   top: -15px;
-  border-radius: 10px;
   border: 2px solid rgb(180, 192, 184);
 
 }
@@ -1323,15 +1358,15 @@ footer{
     justify-content: center;
     align-items: center;
     background-color: none;
-    
-    background: linear-gradient(to right, var(--anotherColor4),var(--anotherColor4));
+
     border: none;
     width: 100%;
   }
   .card{
 
     border: 2px solid var(--anotherColor);
-    background-color: rgb(95, 11, 11);
+    background-color: rgba(22, 24, 26, 0.5);
+
     color: var(--tertiary-color);
     width: 100%;
     margin-top: 5px;
@@ -1578,7 +1613,6 @@ footer{
 
    
     margin-top:0;
-    border-top: 2px dotted whitesmoke;
 
   }
   .social-con{
@@ -1672,6 +1706,10 @@ footer{
   width: 72%;
 
 }
+.second-sec{
+padding-top: 50px;
+
+}
 
 }
 
@@ -1718,7 +1756,6 @@ footer{
   }
   .second-sec{
 
-    border-top: 2px dotted whitesmoke;
     margin-top:0;
   }
 
