@@ -488,7 +488,7 @@ left: 19px;
 .box-skill{
 
   display: flex;
-  width: 80%;
+  width: 90%;
   justify-content: space-between;
   padding: 20px;
   margin-top: 20px;
@@ -501,7 +501,7 @@ left: 19px;
   border: 2px solid var(--anotherColor);
   background-color: rgba(201, 30, 30, 0.733);
   color: var(--tertiary-color);
-  width: 18rem;
+  width: 22rem;
 }
 .card-img-top{
 
@@ -517,9 +517,9 @@ left: 19px;
 }
 .card-body p{
 
-  font-size: var(--one-rem);
+  font-size: 0.8rem;
   font-family: var(--font-styles);
-
+  text-align: justify;
 }
 
 
@@ -1594,7 +1594,7 @@ footer{
     left: 1%;
     width: 98%;
     height: 7%;
-    z-index: 1000;
+    z-index: 999;
   }
 
 }
