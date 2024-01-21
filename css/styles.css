@@ -296,8 +296,10 @@ position: relative;
   height: auto;
   width: 100%;
   margin-top: 100px;
-  z-index: -2;
+  z-index: 5;
   background: linear-gradient(40deg, #183241, #131211);
+  overflow: hidden;
+
 }
 
 
@@ -339,7 +341,8 @@ position: relative;
 .right-content{
   padding: 20px;
   width: 50%;
-  z-index: -2;
+  z-index: 5;
+  overflow: hidden;
 }
 
 .text-con{
@@ -383,7 +386,9 @@ position: relative;
 }
 .btn-con{
 
-  margin-top: 10%;
+  margin-top: 5%;
+  z-index: 999;
+  padding-block: 10px;
 }
 .btn-con button:nth-child(1){
 
@@ -465,7 +470,7 @@ position: relative;
 
 .second-sec{
   background: linear-gradient(35deg, #183241, #131211);
-
+  
   background-color: var(--anotherColor4);
   z-index: 6;
   display: flex;
@@ -594,10 +599,11 @@ left: 19px;
 }
 .percent-intro p{
   text-transform: capitalize;
-  font-size: var(--one-rem);
   color: rgb(172, 171, 171);
   text-align: justify;
   margin-top: 50px;
+  font-size: 0.9rem;
+
 }
 .percent-container{
 
@@ -1369,7 +1375,7 @@ footer{
 
     color: var(--tertiary-color);
     width: 100%;
-    margin-top: 5px;
+    margin-top: 20px;
   }
   .card-img-top{
   

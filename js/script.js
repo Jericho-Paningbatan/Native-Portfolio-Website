@@ -245,20 +245,6 @@ function isElementInViewport(element) {
   );
 }
 
-var span = document.getElementById('span');
-
-
-function time() {
-  var d = new Date();
-  var s = d.getSeconds();
-  var m = d.getMinutes();
-  var h = d.getHours();
-  span.textContent =  h +"-"+('0'+ m)+'-'+ s;
-    
-}
-
-setInterval(time, 1000);
-
 
 
 function mainAni() {
