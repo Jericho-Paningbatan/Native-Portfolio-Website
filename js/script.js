@@ -245,8 +245,60 @@ function isElementInViewport(element) {
   );
 }
 
+
+
+
+
+
+function mainAni() {
+ var TextCon = document.querySelector('.text-con > .hi-txt');
+
+  if (isElementInViewport(TextCon)) {
+    TextCon.classList.add('mAinAni');
+
+  } else {
+    TextCon.classList.remove('mAinAni');
+
+
+  }
+}
+
+
+function mainAni2() {
+  var TextCon = document.querySelector('.text-con > h1');
+ 
+   if (isElementInViewport(TextCon)) {
+     TextCon.classList.add('mAinAni2');
+ 
+   } else {
+     TextCon.classList.remove('mAinAni2');
+ 
+ 
+   }
+ }
+
+ 
+function mainAni3() {
+  var TextCon = document.querySelector('.text-con > .front-end');
+ 
+   if (isElementInViewport(TextCon)) {
+     TextCon.classList.add('mAinAni3');
+ 
+   } else {
+     TextCon.classList.remove('mAinAni3');
+ 
+ 
+   }
+ }
+
+
+
+
+
+
+
 function addhtml() {
-  var myElement = document.getElementById('graph1');
+  let myElement = document.getElementById('graph1');
 
   if (isElementInViewport(myElement)) {
     myElement.classList.add('html-scrolljs');
@@ -315,11 +367,25 @@ function addbootsrap() {
   addjs();
   addreact();
   addbootsrap();
+  mainAni();
+  mainAni2();
+  mainAni3();
+
+
 }
+
+function onloadS() {
+ 
+  mainAni();
+  mainAni2();
+  mainAni3();
+
+}
+
 
 // Listen for scroll events and call handleScroll function
 window.addEventListener('scroll', handleScroll);
-
+window.addEventListener('load', onloadS);
 
 
 
@@ -405,3 +471,19 @@ searchIcons.addEventListener('click', () => {
   searchBars.classList.toggle('searBarani');
 
 });
+
+
+let searchInput = document.querySelector('.searchInp');
+let SearchBar = document.querySelector('.searchbar');
+
+searchInput.addEventListener('blur', ()=>{
+
+    SearchBar.classList.toggle('searBarani');
+
+
+});
+
+
+let BoDy = document.querySelectorAll('body');
+let SearBar = document.querySelector('.searchbar');
+
