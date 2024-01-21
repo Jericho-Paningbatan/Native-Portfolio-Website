@@ -214,12 +214,13 @@ position: relative;
   position: absolute;
   background-color: rgba(71, 90, 109, 0.5);
   border: 2px solid var(--anotherColor);
-  right: 2%;
+  right: 1%;
   width: 30%;
   height: 10%;
   position: fixed;
   z-index: 999;
   display: none;
+  overflow: hidden;
 }
 .searchInp {
   position: relative;
@@ -232,6 +233,7 @@ position: relative;
   left: 15px;
   top: 5px;
   user-select: none;
+  
 
 }
 
@@ -251,19 +253,25 @@ position: relative;
   position: relative;
   left: 15px;
   top: 5px;
+  font-size: 0.8rem;
+  z-index: 998;
+  flex-wrap: nowrap;
 
 }
 .searBarani{
-  animation: searchbarAni 0.3s ease-in-out;
+  animation: searchbarAni 0.7s ease-in-out;
   display: block;
 }
 
 @keyframes searchbarAni {
 
-  from{
+  0%{
     transform: translateY(-200px);
   }
-  to{
+  50%{
+    width: 0;
+  }
+  100%{
     transform: translateY(0);
   }
   
