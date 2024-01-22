@@ -162,13 +162,13 @@ function openInfowebcon3 (){
 
    
 
-    lessthan2.style.display = 'block';
-    greaterthan2.style.display = 'none';
+    lessthan2.style.display = 'none';
+    greaterthan2.style.display = 'block';
     infoWebcon2.classList.add('info-webconJS2');
   }else{
 
-    greaterthan2.style.display = 'block';
-    lessthan2.style.display = 'none';
+    greaterthan2.style.display = 'none';
+    lessthan2.style.display = 'block';
     infoWebcon2.classList.remove('info-webconJS2');
 
   }
@@ -484,3 +484,31 @@ searchInput.addEventListener('blur', ()=>{
 let BoDy = document.querySelectorAll('body');
 let SearBar = document.querySelector('.searchbar');
 
+
+
+
+
+
+// project page
+
+let projectModal = document.querySelector('.project-cons');
+let projectLink = document.querySelector('.projectbtn');
+let exitProModal = document.querySelector('.box-project i');
+
+
+projectLink.addEventListener('click', (e) => {
+  projectModal.classList.add('boxprojectmodal');
+  document.body.style.overflow = 'hidden'
+  e.preventDefault();
+
+})
+
+exitProModal.addEventListener('click', ()=>{
+
+
+  projectModal.classList.remove('boxprojectmodal');
+  document.body.style.overflow = 'visible'
+
+
+
+})
