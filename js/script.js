@@ -512,3 +512,53 @@ exitProModal.addEventListener('click', ()=>{
 
 
 })
+
+
+
+
+
+
+
+
+
+
+let projImg = document.querySelectorAll('.proj-img-con');
+let proImg = document.querySelectorAll('.proj-img-con > img');
+
+let projbtns = document.querySelectorAll('.cover-img');
+let getBtn = document.querySelectorAll('.proj-txt > button');
+
+
+projImg.forEach((projImg, index) => {
+  projImg.addEventListener('mouseover', () => {
+
+    projbtns[index].classList.add('coverBtnani');
+
+    
+  });
+
+  projImg.addEventListener('mouseout', () => {
+    projbtns[index].classList.remove('coverBtnani');
+
+  });
+
+
+
+});
+
+
+getBtn.forEach((getBtn, index) => {
+  getBtn.addEventListener('click', () => {
+
+    projbtns[index].classList.add('coverBtnani');
+
+    
+  });
+
+
+
+
+
+});
+
+

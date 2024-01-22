@@ -184,7 +184,7 @@ margin-bottom: 10px;
   padding-inline: 30px;
   position: relative;
   align-self: center;
-  left: 5%;
+  left: 3%;
   top: 5%;
 
 }
@@ -210,7 +210,7 @@ margin-bottom: 10px;
   width: 8%;
 
 }
-.box-project i{
+.box-project .fa-x{
 
   position: absolute;
   right: 3%;
@@ -250,7 +250,6 @@ margin-bottom: 10px;
   min-height: 100%;
   margin-bottom: 20px;
   cursor: pointer;
-  box-shadow: 0 5px 10px rgba(19, 20, 20, 0.8);
 
 }
 .proj-row img{
@@ -269,6 +268,7 @@ margin-bottom: 10px;
   padding-inline: 20px;
   padding-block: 10px;
 }
+
 .proj-txt p{
 
   color: whitesmoke;
@@ -283,20 +283,27 @@ margin-bottom: 10px;
 .proj-txt button{
 
   display: none;
+  border: none;
+  width: 50%;  
+  background-color:#d63031; 
+  color: whitesmoke; 
+  margin-top: 30px;
+  outline: none;
+  height: 35px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  
 
 }
 .cover-img{
-
   width: 350px;
   height: 100%;
-  background-color: rgba(230, 178, 178, 0.5);
-  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+
   position: absolute;
   object-fit: cover;
   display: none;
   top: 0;
-  box-shadow: 0 5px 10px rgba(96, 99, 99, 0.8);
-
 }
 .btns-proj{
 
@@ -306,11 +313,40 @@ margin-bottom: 10px;
   align-items: center;
   height: 100%;
 }
+
 .btns-proj button{
   width: 70px;
   height: 40px;
-  background-color: #d63031;
-  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  border: 4px solid #d63031;
+}
+.btns-proj button i{
+color: whitesmoke;
+
+}
+
+.coverBtnani{
+
+  animation: coverimgani 0.3s ease-in-out;
+  display: block;
+}
+
+@keyframes coverimgani {
+  0%{
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0.2;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  } 
 }
 
 
@@ -320,7 +356,7 @@ margin-bottom: 10px;
   .box-project{
     align-self: center;
     max-width: 100%;
-    width: 90%;
+    width: 95%;
     height: 90%;
     background-color: var(--anotherColor4);
     overflow: hidden;
