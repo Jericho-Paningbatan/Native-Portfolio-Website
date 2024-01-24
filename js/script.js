@@ -389,7 +389,7 @@ window.addEventListener('load', onloadS);
 
 
 var announceCon = document.querySelector('.announce-con');
-let navlinkS = document.querySelectorAll('.a');
+let navlinkS = document.querySelectorAll('.b');
 let exiTModal = document.querySelector('.box-announce > .fa-x');
 
 navlinkS.forEach(navlinK => {
