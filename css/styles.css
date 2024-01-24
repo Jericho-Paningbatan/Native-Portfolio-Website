@@ -1186,7 +1186,7 @@ left: 19px;
 }
 
 .svgfoot .shape-fill {
-  fill: var(--anotherColor5);
+  fill: #570a0a;
 }
 footer{
   border: none;
@@ -1197,7 +1197,7 @@ footer{
   width: 100%;
   bottom: 0;
   padding: 10px;
-  background-color:  var(--anotherColor5);
+  background-color:  #570a0a;
 
 }
 .links-imp{
