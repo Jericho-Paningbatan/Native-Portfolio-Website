@@ -586,7 +586,7 @@ left: 19px;
 }
 .card-body p{
 
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: var(--font-styles);
   text-align: justify;
 }
