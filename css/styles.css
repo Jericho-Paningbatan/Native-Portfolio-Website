@@ -356,7 +356,7 @@ position: relative;
 
   color: var(--tertiary-color);
   font-style: var(--fontsize1);
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
 
 }
@@ -364,7 +364,7 @@ position: relative;
 .text-con h3{
 
   color: var(--anotherColor);
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 700;
 
 }
@@ -502,7 +502,7 @@ position: relative;
   text-transform: uppercase;
   color: var(--tertiary-color);
   margin-top: 1em;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .second-sec h1::after{
 
@@ -607,7 +607,7 @@ left: 19px;
 }
 .percent-intro h2{
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
 }
@@ -616,7 +616,7 @@ left: 19px;
   color: rgb(172, 171, 171);
   text-align: justify;
   margin-top: 50px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 
 }
 .percent-container{
@@ -650,7 +650,7 @@ left: 19px;
 .percent h3, .percent2 h3{
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--anotherColor);
   margin-bottom: 50px;
 }
@@ -730,7 +730,7 @@ left: 19px;
   margin-top: 30px;
   color: whitesmoke;
   text-align: justify;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .btn-info-web4{
@@ -1713,13 +1713,12 @@ footer{
 
 .text-con .hi-txt{
 
-  font-size: 1em;
   text-align: left;
 }
 .text-con p{
   text-align: left;
 
-  font-size: 0.8em;
+  font-size: 0.9rem;
 }
 .btn-con{
   display: flex;
