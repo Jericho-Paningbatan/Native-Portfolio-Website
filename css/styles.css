@@ -534,7 +534,7 @@ left: 19px;
   border: 2px solid var(--anotherColor);
   background-color: rgba(22, 24, 26, 0.5);
   color: var(--tertiary-color);
-  width: 20rem;
+  width: 24rem;
 }
 @keyframes colorAni1 {
   0%{  background-color: #8e44ad; }
