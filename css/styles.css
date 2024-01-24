@@ -534,14 +534,23 @@ left: 19px;
   border: 2px solid var(--anotherColor);
   background-color: rgba(22, 24, 26, 0.5);
   color: var(--tertiary-color);
-  width: 25rem;
+  width: 20rem;
 }
-@keyframes colorAni {
-  0%{  background-color: #0b89c4;  }
-  30%{  background-color: #c479e4; }
+@keyframes colorAni1 {
+  0%{  background-color: #8e44ad; }
   50%{  background-color: #b8002e;  }
-  80%{  background-color: #b8b500;  }
-  100%{  background-color: #e71a81;  }  
+  100%{  background-color: #b8b500;  }  
+}
+
+@keyframes colorAni2 {
+  0%{  background-color: #b8002e; }
+  50%{  background-color:   #b8b500;}
+  100%{  background-color: #8e44ad;}  
+}
+@keyframes colorAni3 {
+  0%{  background-color: #b8b500; }
+  50%{  background-color:  #8e44ad ;}
+  100%{  background-color:  #b8002e;}  
 }
 .card-top1{
 
@@ -550,7 +559,7 @@ left: 19px;
   background-color: #8e44ad;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-  animation: colorAni 1s ease-in-out  infinite;
+  animation: colorAni1 5s ease-in  infinite;
 }
 .card-top2{
 
@@ -559,7 +568,7 @@ left: 19px;
   background-color: #b8002e;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-  animation: colorAni 1s ease-in-out  infinite;
+  animation: colorAni2 5s ease-in 0.5s infinite;
 
 }
 .card-top3{
@@ -569,7 +578,7 @@ left: 19px;
   background-color: #b8b500;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-  animation: colorAni 1s ease-in-out  infinite;
+  animation: colorAni3 5s ease-in 0.9s infinite;
 
 }
 .card-img-top{
