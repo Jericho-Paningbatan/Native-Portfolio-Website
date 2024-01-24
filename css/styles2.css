@@ -61,7 +61,7 @@
 .h2-con p{
   font-size: 1rem;
   text-align: justify;
-  color: rgb(172, 171, 171);
+  color: rgb(216, 208, 208);
   text-transform: capitalize;
   margin-top: 50px;
 }
@@ -124,7 +124,7 @@ margin-bottom: 10px;
 
 }
 .card-sayings p{
-  color: rgb(235, 234, 234);
+  color: rgb(216, 208, 208) ;
 
   margin-top: 40px;
   font-style: italic;

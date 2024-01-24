@@ -589,6 +589,7 @@ left: 19px;
   font-size: 0.9rem;
   font-family: var(--font-styles);
   text-align: justify;
+  color: rgb(216, 208, 208);
 }
 
 
@@ -613,7 +614,7 @@ left: 19px;
 }
 .percent-intro p{
   text-transform: capitalize;
-  color: rgb(172, 171, 171);
+  color: rgb(216, 208, 208);
   text-align: justify;
   margin-top: 50px;
   font-size: 1rem;
@@ -728,7 +729,7 @@ left: 19px;
 
 .info-webcon p, .info-webcon2 p{
   margin-top: 30px;
-  color: whitesmoke;
+  color: rgb(216, 208, 208);
   text-align: justify;
   font-size: 1rem;
 }
