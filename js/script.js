@@ -50,6 +50,8 @@ function barClick(){
 
 
 
+
+
 let navAlist = document.querySelectorAll('.a');
 
 navAlist.forEach(navlistA =>{
@@ -216,7 +218,7 @@ function open4Infowebcon (){
 
 
 
-
+// Download CV
 
 function downloadcv (){
 
@@ -233,7 +235,19 @@ document.body.removeChild(a);
 }
 
 
+// Hire Button
 
+function hireMe (){
+
+  window.location.href = 'mailto:echoop058@gmail.com'
+
+
+}
+
+
+
+
+// GET viewport screen location
 
 function isElementInViewport(element) {
   var elementRect = element.getBoundingClientRect();
@@ -404,19 +418,21 @@ navlinkS.forEach(navlinK => {
 
 });
 
-let mobBtns = document.querySelectorAll('.buttons');
+// hireme btn under dev
 
-mobBtns.forEach(navbtns => {
+// let mobBtns = document.querySelectorAll('.buttons');
+
+// mobBtns.forEach(navbtns => {
   
-  navbtns.addEventListener('click', (e) =>{
-    announceCon.classList.add('announce-cons');
-    document.body.style.overflow = 'hidden';
-    e.preventDefault();
+//   navbtns.addEventListener('click', (e) =>{
+//     announceCon.classList.add('announce-cons');
+//     document.body.style.overflow = 'hidden';
+//     e.preventDefault();
 
 
-  });
+//   });
 
-});
+// });
 
 let navBtns = document.querySelectorAll('.link-btns');
 

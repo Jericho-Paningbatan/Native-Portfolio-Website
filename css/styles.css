@@ -97,7 +97,6 @@ nav{
   justify-content: space-between;
   align-items: center;
   min-height: 100px;
-  border-bottom: 1px solid var(--tertiary-color);
   position: fixed;
   top: 0;
   z-index: 1000;
@@ -226,8 +225,7 @@ position: relative;
   border: 2px solid var(--anotherColor);
   right: 1%;
   width: 30%;
-  height: 10%;
-  position: fixed;
+  height: 2%;
   z-index: 999;
   display: none;
   overflow: hidden;
@@ -269,7 +267,7 @@ position: relative;
 
 }
 .searBarani{
-  animation: searchbarAni 0.7s ease-in-out;
+  animation: searchbarAni 0.3s ease-in-out;
   display: block;
 }
 
