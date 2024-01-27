@@ -47,6 +47,10 @@
 
           </ul>
         </div>
+        <div class="searchbar">
+          <input type="text" placeholder="Search Blogs" class="searchInp">
+          <input type="button" name="searchbtns" class="searchBarbtn" value="Search">
+      </div>
         <div class="login-link">
           
           <ul class="nav-btns">
@@ -61,10 +65,7 @@
  
   </header>
 
-  <div class="searchbar">
-    <input type="text" placeholder="Search Blogs" class="searchInp">
-    <input type="button" name="searchbtns" class="searchBarbtn" value="Search">
-</div>
+
   
   
   <section class="main-sec">

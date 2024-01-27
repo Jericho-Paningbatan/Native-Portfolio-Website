@@ -48,6 +48,10 @@
 
           </ul>
         </div>
+        <div class="searchbar">
+          <input type="text" placeholder="Search Blogs" class="searchInp">
+          <input type="button" name="searchbtns" class="searchBarbtn" value="Search">
+      </div>
         <div class="login-link">
           
           <ul class="nav-btns">
@@ -62,10 +66,7 @@
  
   </header>
 
-  <div class="searchbar">
-    <input type="text" placeholder="Search Blogs" class="searchInp">
-    <input type="button" name="searchbtns" class="searchBarbtn" value="Search">
-</div>
+ 
   
 
 <!-- Main Page -->
@@ -87,24 +88,24 @@
     </div>
     <div class="contact-con2">
       <div class="contact-form">
-        <form action="">
+        <form class="contactForm">
         <div class="form-con-txt">
           <h2>Send Message Here</h2>
           <h4>Please use the form below to send us a message.</h4>
         </div>
         <div class="contact-row1">
-          <input type="text" placeholder="Firstname*" required>
-          <input type="text" placeholder="Lastname*" required>
+          <input type="text" placeholder="Firstname*" name="firstname" required>
+          <input type="text" placeholder="Lastname*" name="lastname" required>
 
         </div>
        
-        <input type="email" placeholder="Email*" required>
+        <input type="email" placeholder="Email*" name="email"required>
         <div class="contact-row2">
           <textarea name="message" placeholder="Message Here*" cols="30" rows="10" required></textarea>
         </div>
 
         <div class="contact-row3">
-          <input type="submit" value="Send">
+          <input type="submit" value="Send" name="submit">
           
         </div>
       </form>
@@ -114,7 +115,19 @@
 
   </main>
  
-  
+  <div class="successModal">
+
+      <div class="conModal">
+            
+          <div class="imgModalcon">
+              <img src="../assets/icon/tick-mark.png" alt="checkmark">
+          </div>
+          <h1>Message Successfully Sent</h1>
+            <h3>Thank you for your message. It has been received.</h3>
+          <div class="borderSuccess"></div>
+      </div>
+
+  </div>
   
   <div class="svgfoot">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

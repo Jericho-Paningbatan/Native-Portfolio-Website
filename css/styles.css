@@ -220,18 +220,21 @@ position: relative;
 }
 
 .searchbar{
+
  
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  background-color: rgba(71, 90, 109, 0.5);
-  border: 2px solid var(--anotherColor);
-  right: 1%;
-  width: 30%;
-  height: 2%;
-  z-index: 999;
-  display: none;
-  overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    background-color: rgba(71, 90, 109, 0.5);
+    border: 2px solid var(--anotherColor);
+    width: 30%;
+    height: 50%;
+    z-index: 999;
+    display: none;
+    overflow: hidden;
+    top: 100%;
+
 }
 .searchInp {
   position: relative;
@@ -1690,10 +1693,11 @@ footer{
 
   .searchbar{
  
-    left: 1%;
-    width: 98%;
-    height: 7%;
-    z-index: 999;
+  
+    right: 0;
+    width: 100%;
+    height: 50%;
+    top: 100%;
   }
 
 }

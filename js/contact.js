@@ -230,37 +230,90 @@ $(exitProModal).on('click', () =>{
 
 
 // project thumbnail hover
-let projImg = $('.proj-img-con');
-let proImg = $('.proj-img-con > img');
+let projImg = document.querySelectorAll('.proj-img-con');
+let proImg = document.querySelectorAll('.proj-img-con > img');
 
-let projbtns = $('.cover-img');
-let getBtn = $('.proj-txt > button');
+let projbtns = document.querySelectorAll('.cover-img');
+let getBtn = document.querySelectorAll('.proj-txt > button');
 
 
-      $(projImg).each(function(index){
+projImg.forEach((projImg, index) => {
+  projImg.addEventListener('mouseover', () => {
 
-        $(this).on('mouseover', () =>{
-      
-          projbtns[index].addClass('coverBtnani');
-      
-        });
-      
-        $(this).on('mouseout', ()=>{
-      
-          projbtns[index].removeClass('coverBtnani');
-      
-        })
-      });
+    projbtns[index].classList.add('coverBtnani');
 
-      $(getBtn).each((index) => {
-        $(this).click(() => {
-            projbtns[index].addClass('coverBtnani');
-        });
-      });
+    
+  });
+
+  projImg.addEventListener('mouseout', () => {
+    projbtns[index].classList.remove('coverBtnani');
+
+  });
+
+
+
+});
+
+
+getBtn.forEach((getBtn, index) => {
+  getBtn.addEventListener('click', () => {
+
+    projbtns[index].classList.add('coverBtnani');
+
+    
+  });
+
+
+
+
+
+});
+
+
 
 });
 
 
 
 
+
+// contactform Ajax
+
+$(document).ready(function(){
+  $('.contactForm').submit(function(e){
+
+    e.preventDefault();
+
+    var formContactData = $(this).serialize();
+
+    $.ajax({ 
+      url:'../database/contact-form.php',
+      type: 'POST',
+      data: formContactData,
+      success: function(response){
+        console.log(response);
+
+        $('.successModal').css('display', 'block');
+        $('.contactForm')[0].reset();
+
+        setTimeout(function(){
+
+          $('.successModal').css('display', 'none');
+
+
+        },2000);
+
+      },
+      error:function(xhr, status, error){
+
+        console.error('Request failed. Status:', status, 'Error:', error);
+                
+      }
+
+    });
+
+  });
+
+
+});
 
