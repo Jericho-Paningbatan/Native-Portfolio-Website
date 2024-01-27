@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
 *{
 
   padding: 0;
@@ -194,11 +196,11 @@ position: relative;
   border: 2px solid var(--anotherColor);
   right: 1%;
   width: 30%;
-  height: 38%;
+  height: 5%;
   z-index: 999;
   display: none;
   overflow: hidden;
-  top: 58%;
+  top: 0;
 }
 .searchInp {
   position: relative;
@@ -287,14 +289,14 @@ main{
 } 
 .image-contactbg h1 i{
   font-weight: bolder;
-  color: #00b894;
+  color: var(--anotherColor3);
   position: relative;
   
 } 
 .image-contactbg h1::after{
   content: '';
   position: relative;
-  border-bottom: 10px solid var(--anotherColor);
+  border-bottom: 10px solid var(--anotherColor3);
   display: flex;
   margin-top: 10px;
   justify-content: center;
@@ -347,6 +349,7 @@ main{
   width: 90%;
   height: auto;
   padding-block: 50px;
+  padding-inline: 30px ;
   gap: 30px;
   border: 3px solid #4d4c4b;
   border-radius: 5px;
@@ -354,7 +357,7 @@ main{
 }
 .form-con-txt{
 
-  width: 77%;
+  width: 100%;
 }
 .form-con-txt h2{
 
@@ -370,11 +373,14 @@ main{
 .contact-row1{
  display: flex;
   gap: 20px;
+  max-width: 100%;
+  width: 100%;
 
 }
 .contact-row1 input{
 
-  width: 250px;
+  max-width: 100%;
+  width: 100%;
   height: 50px;
   padding-inline: 20px;
   background-color: rgba(19, 18, 18, 0.5);
@@ -386,7 +392,9 @@ main{
 }
 .contact-form input[type=email]{
 
-  width: 520px;
+
+  max-width: 100%;
+  width: 100%;
   height: 50px;
   padding-inline: 20px;
   background-color: rgba(19, 18, 18, 0.5);
@@ -395,21 +403,26 @@ main{
   border: 2px solid rgb(102, 98, 99);
 
 }
+.contact-row2{
+
+  width: 100%;
+}
 .contact-row2 textarea{
 
-  width: 520px;
+  max-width: 100%;
+  width: 100%;
   padding-inline: 20px;
   padding-block: 20px;
   background-color: rgba(19, 18, 18, 0.5);
   color: #cccccc;
   border-radius: 5px;
   border: 2px solid rgb(102, 98, 99);
-
+  height: auto;
 
 }
 .contact-row3{
 
-  width: 77%;
+  width: 100%;
 
 }
 .contact-row3 input[type=submit]{
@@ -674,8 +687,6 @@ footer{
     display: none;
 
   }
-
-  
   
 
   
@@ -755,13 +766,44 @@ footer{
 
   .searchbar{
  
-    width: 98%;
-    height: 40%;
+    width: 100%;
+    height:3%;
     z-index: 999;
-    top: 59%;
-    
+    right: 0;
   }
 
+  /* contact page */
+
+  .contact-cons{
+
+    flex-direction: column;
+  }
+  .contact-con1{
+
+    width: 100%;
+    padding-inline: 50px;
+    padding-block: 50px;
+  }
+  .contact-con2{
+
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    padding-inline: 5px;
+    padding-block: 0;
+
+  }
+  .imgcontact{
+    margin-top: 10%;
+    width: 100%;
+  }
+  .contact-form form{
+   
+    width: 100%;
+ 
+  }
+
+  
 }
 
 
@@ -771,6 +813,11 @@ footer{
 .box-announce{
   top: 30%;
   width: 72%;
+
+}
+.contact-row1{
+
+  flex-direction: column;
 
 }
 
@@ -834,32 +881,57 @@ footer{
     font-size: 1rem;
 
   }
-}
-@media only screen and (max-width: 332px){
+  /* contact page */
+  .image-contactbg i{
 
-   /* searchbar */
+    font-size: 1.5rem;
 
-   .searchbar{
- 
-    width: 98%;
-    height: 40%;
-    z-index: 999;
-    top: 58%;
-    
   }
-
-}
-@media only screen and (max-width: 280px){
-
-  /* searchbar */
-
-  .searchbar{
-
-   width: 98%;
-   height: 30%;
-   z-index: 999;
-   top: 46%;
+  .image-contactbg h1::after{
+  
    
- }
+    width: 40%;
+    left: 90px;
+  }
+  .contact-con1 h1{
 
+    font-weight: 600;
+    font-size: 1.3rem;
+  
+  }
+  .contact-con1{
+
+    width: 100%;
+    padding-inline: 20px;
+    padding-block: 50px;
+  }
+  .contact-con1 h3{
+    font-size: 1rem;
+  
+  }
+  .form-con-txt h2{
+
+    font-size: 1.5rem;
+  }
+  .form-con-txt h4{
+  
+    font-size: 1rem;
+    color: wheat;
+  }
+  .contact-row3 input[type=submit]{
+    width: 100px;
+    height: 40px;
+  
+  }
+  
+  
+}
+@media only screen and (max-width: 350px){
+
+
+  .contact-form form{
+   
+    padding-inline: 10px;
+  }
+   
 }

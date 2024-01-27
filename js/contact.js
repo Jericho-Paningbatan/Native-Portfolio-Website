@@ -1,3 +1,6 @@
+$(document).ready(function(){
+
+
 let navMenu = document.querySelector('.fa-bars');
 let navList = document.querySelector('.nav-list');
 let faX = document.querySelector('.fa-x');
@@ -50,20 +53,22 @@ function barClick(){
 
 
 
-let navAlist = document.querySelectorAll('.a');
+let navAlist = $('.a');
 
-navAlist.forEach(navlistA =>{
 
-  navlistA.addEventListener('mouseover', ()=>{
 
-    navlistA.classList.add('aNav');
+$(navAlist).each(()=>{
+
+  $(this).on('mouseover', ()=>{
+
+    this.addClass('aNav');
+
 
   });
+  $(this).on('mouseout', ()=>{
 
-  navlistA.addEventListener('mouseout', ()=>{
+    this.removeClass('aNav');
 
-    navlistA.classList.remove('aNav');
-    
 
   });
 
@@ -72,19 +77,16 @@ navAlist.forEach(navlistA =>{
 
 
 
+// function isElementInViewport(element) {
+//   var elementRect = element.getBoundingClientRect();
+//   return (
+//     elementRect.top >= 0 &&
+//     elementRect.left >= 0 &&
+//     elementRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+//     elementRect.right <= (window.innerWidth || document.documentElement.clientWidth)
+//   );
+// }
 
-
-
-
-function isElementInViewport(element) {
-  var elementRect = element.getBoundingClientRect();
-  return (
-    elementRect.top >= 0 &&
-    elementRect.left >= 0 &&
-    elementRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    elementRect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
 
 
 
@@ -105,7 +107,21 @@ navlinkS.forEach(navlinK => {
 
 });
 
+// hireme btn under dev
 
+// let mobBtns = document.querySelectorAll('.buttons');
+
+// mobBtns.forEach(navbtns => {
+  
+//   navbtns.addEventListener('click', (e) =>{
+//     announceCon.classList.add('announce-cons');
+//     document.body.style.overflow = 'hidden';
+//     e.preventDefault();
+
+
+//   });
+
+// });
 
 let navBtns = document.querySelectorAll('.link-btns');
 
@@ -137,41 +153,43 @@ exiTModal.addEventListener('click', () =>{
 
 
 
+// search bar
+
+let searchIcon = $('.nav-btns > .search-icon');
+let searchBar = $('.searchbar');
 
 
-let searchIcon = document.querySelector('.nav-btns > .search-icon');
-let searchBar = document.querySelector('.searchbar');
+$(searchIcon).on('click', ()=>{
+  searchBar.toggleClass('searBarani');
 
-searchIcon.addEventListener('click', () => {
+})
 
-  searchBar.classList.toggle('searBarani');
+let searchIcons = $('nav > .search-icon');
+let searchBars = $('.searchbar');
+
+
+$(searchIcons).on('click', ()=>{
+
+  searchBars.toggleClass('searBarani');
+
+
+})
+
+
+let searchInput = $('.searchInp');
+let SearchBar = $('.searchbar');
+
+
+$(searchInput).on('blur', () =>{
+
+  SearchBar.toggleClass('searBarani');
+
 
 });
 
 
-let searchIcons = document.querySelector('nav > .search-icon');
-let searchBars = document.querySelector('.searchbar');
-
-searchIcons.addEventListener('click', () => {
-
-  searchBars.classList.toggle('searBarani');
-
-});
 
 
-let searchInput = document.querySelector('.searchInp');
-let SearchBar = document.querySelector('.searchbar');
-
-searchInput.addEventListener('blur', ()=>{
-
-    SearchBar.classList.toggle('searBarani');
-
-
-});
-
-
-let BoDy = document.querySelectorAll('body');
-let SearBar = document.querySelector('.searchbar');
 
 
 
@@ -180,26 +198,26 @@ let SearBar = document.querySelector('.searchbar');
 
 // project page
 
-let projectModal = document.querySelector('.project-cons');
-let projectLink = document.querySelector('.projectbtn');
-let exitProModal = document.querySelector('.box-project i');
+let projectModal = $('.project-cons');
+let projectLink = $('.projectbtn');
+let exitProModal = $('.box-project i');
 
 
-projectLink.addEventListener('click', (e) => {
-  projectModal.classList.add('boxprojectmodal');
-  document.body.style.overflow = 'hidden'
+$(projectLink).on('click', (e)=>{
+
   e.preventDefault();
+  projectModal.addClass('boxprojectmodal');
+  document.body.style.overflow = 'hidden'
 
 })
 
-exitProModal.addEventListener('click', ()=>{
+
+$(exitProModal).on('click', () =>{
 
 
-  projectModal.classList.remove('boxprojectmodal');
+  projectModal.removeClass('boxprojectmodal');
   document.body.style.overflow = 'visible'
 
-
-
 })
 
 
@@ -211,43 +229,38 @@ exitProModal.addEventListener('click', ()=>{
 
 
 
-let projImg = document.querySelectorAll('.proj-img-con');
-let proImg = document.querySelectorAll('.proj-img-con > img');
+// project thumbnail hover
+let projImg = $('.proj-img-con');
+let proImg = $('.proj-img-con > img');
 
-let projbtns = document.querySelectorAll('.cover-img');
-let getBtn = document.querySelectorAll('.proj-txt > button');
-
-
-projImg.forEach((projImg, index) => {
-  projImg.addEventListener('mouseover', () => {
-
-    projbtns[index].classList.add('coverBtnani');
-
-    
-  });
-
-  projImg.addEventListener('mouseout', () => {
-    projbtns[index].classList.remove('coverBtnani');
-
-  });
+let projbtns = $('.cover-img');
+let getBtn = $('.proj-txt > button');
 
 
+      $(projImg).each(function(index){
 
-});
+        $(this).on('mouseover', () =>{
+      
+          projbtns[index].addClass('coverBtnani');
+      
+        });
+      
+        $(this).on('mouseout', ()=>{
+      
+          projbtns[index].removeClass('coverBtnani');
+      
+        })
+      });
 
-
-getBtn.forEach((getBtn, index) => {
-  getBtn.addEventListener('click', () => {
-
-    projbtns[index].classList.add('coverBtnani');
-
-    
-  });
-
-
-
-
+      $(getBtn).each((index) => {
+        $(this).click(() => {
+            projbtns[index].addClass('coverBtnani');
+        });
+      });
 
 });
+
+
+
 
 
