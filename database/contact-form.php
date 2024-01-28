@@ -26,8 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.zoho.eu';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'jericho.paningbatan@echoodev.tech';
-        $mail->Password   = 'H9kXWsRyELDv';
+        $mail->Username   = '';
+        $mail->Password   = '';
         $mail->SMTPSecure = "tls"; 
         $mail->Port       = 587; 
 

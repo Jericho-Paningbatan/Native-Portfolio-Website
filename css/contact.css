@@ -1006,6 +1006,9 @@ footer{
    
     padding-inline: 15px;
   }
+  .contact-con2{
+    padding-inline: 0;
+  }
   
     /* successModal */
     .conModal{
